@@ -4,6 +4,7 @@ using ServiceStack.Messaging;
 using ServiceStack.Redis;
 using ServiceStack.Redis.Messaging;
 using ServiceStack.ServiceHost;
+using ServiceStack.ServiceInterface;
 using ServiceStack.WebHost.Endpoints;
 using System;
 using System.Diagnostics;
@@ -48,7 +49,7 @@ namespace SS39Q
         public string Name { get; set; }
     }
     
-    public class HelloService
+    public class HelloService : Service
     {
         public IMessageQueueClient QueueClient { get; set; }
 
